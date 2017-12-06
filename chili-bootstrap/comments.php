@@ -31,7 +31,7 @@ if ( post_password_required() ) {
             $comments_number = get_comments_number();
             if ( '1' === $comments_number ) {
                 /* translators: %s: post title */
-                printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'wp-bootstrap-starter' ), get_the_title() );
+                printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'chili-bootstrap' ), get_the_title() );
             } else {
                 printf(
                 /* translators: 1: number of comments, 2: post title */
@@ -40,7 +40,7 @@ if ( post_password_required() ) {
                         '%1$s thoughts on &ldquo;%2$s&rdquo;',
                         $comments_number,
                         'comments title',
-                        'wp-bootstrap-starter'
+                        'chili-bootstrap'
                     ),
                     number_format_i18n( $comments_number ),
                     get_the_title()
@@ -64,7 +64,7 @@ if ( post_password_required() ) {
 
         <ul class="comment-list">
             <?php
-            wp_list_comments( array( 'callback' => 'wp_bootstrap_starter_comment', 'avatar_size' => 50 ));
+            wp_list_comments( array( 'callback' => 'chili_bootstrap_starter_comment', 'avatar_size' => 50 ));
             ?>
         </ul><!-- .comment-list -->
 
@@ -102,7 +102,7 @@ if ( post_password_required() ) {
         'comment_field' =>  '<p><textarea placeholder="Start typing..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 
         'comment_notes_after' => '<p class="form-allowed-tags">' .
-            __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'wp-bootstrap-starter' ) .
+            __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'chili-bootstrap' ) .
             '</p><div class="alert alert-info">' . allowed_tags() . '</div>'
 
         // So, that was the needed stuff to have bootstrap basic styles for the form elements and buttons

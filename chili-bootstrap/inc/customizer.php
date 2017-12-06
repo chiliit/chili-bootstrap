@@ -1,8 +1,8 @@
 <?php
 /**
- * WP Bootstrap Starter Theme Customizer
+ *Theme Customizer
  *
- * @package WP_Bootstrap_Starter
+ * @package chili_bootstrap_Starter
  */
 
 /**
@@ -15,7 +15,7 @@ function themeslug_sanitize_checkbox( $checked ) {
     return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
-function wp_bootstrap_starter_customize_register( $wp_customize ) {
+function chili_bootstrap_starter_customize_register( $wp_customize ) {
 
 
 
@@ -24,8 +24,8 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'typography',
         array(
-            'title' => __( 'Preset Styles', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the typography', 'wp-bootstrap-starter' ),
+            'title' => __( 'Preset Styles', 'chili-bootstrap' ),
+            //'description' => __( 'This is a section for the typography', 'chili-bootstrap' ),
             'priority' => 20,
         )
     );
@@ -37,7 +37,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'preset_style_setting', array(
-        'label' => __( 'Typography', 'wp-bootstrap-starter' ),
+        'label' => __( 'Typography', 'chili-bootstrap' ),
         'section'    => 'typography',
         'settings'   => 'preset_style_setting',
         'type'    => 'select',
@@ -61,7 +61,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'preset_color_scheme_setting', array(
-        'label' => __( 'Color Scheme', 'wp-bootstrap-starter' ),
+        'label' => __( 'Color Scheme', 'chili-bootstrap' ),
         'section'    => 'typography',
         'settings'   => 'preset_color_scheme_setting',
         'type'    => 'select',
@@ -79,7 +79,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'header_image',
         array(
-            'title' => __( 'Header Banner', 'wp-bootstrap-starter' ),
+            'title' => __( 'Header Banner', 'chili-bootstrap' ),
             'priority' => 30,
         )
     );
@@ -88,7 +88,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_img',
         array(
-            'label' => __( 'Header Image', 'wp-bootstrap-starter' ),
+            'label' => __( 'Header Image', 'chili-bootstrap' ),
             'section' => 'header_images',
             'type' => 'text',
         )
@@ -106,29 +106,29 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
             $wp_customize,
             'header_bg_color',
             array(
-                'label'      => __( 'Header Banner Background Color', 'wp-bootstrap-starter' ),
+                'label'      => __( 'Header Banner Background Color', 'chili-bootstrap' ),
                 'section'    => 'header_image',
                 'settings'   => 'header_bg_color_setting',
             ) )
     );
 
     $wp_customize->add_setting( 'header_banner_title_setting', array(
-        'default' => __( 'WP Bootstrap Framework', 'wp-bootstrap-starter' ),
+        'default' => __( 'WP Bootstrap Framework', 'chili-bootstrap' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_title_setting', array(
-        'label' => __( 'Banner Title', 'wp-bootstrap-starter' ),
+        'label' => __( 'Banner Title', 'chili-bootstrap' ),
         'section'    => 'header_image',
         'settings'   => 'header_banner_title_setting',
         'type' => 'text'
     ) ) );
 
     $wp_customize->add_setting( 'header_banner_tagline_setting', array(
-        'default' => __( 'To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize','wp-bootstrap-starter' ),
+        'default' => __( 'To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize','chili-bootstrap' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_tagline_setting', array(
-        'label' => __( 'Banner Tagline', 'wp-bootstrap-starter' ),
+        'label' => __( 'Banner Tagline', 'chili-bootstrap' ),
         'section'    => 'header_image',
         'settings'   => 'header_banner_tagline_setting',
         'type' => 'text'
@@ -139,7 +139,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_visibility', array(
         'settings' => 'header_banner_visibility',
-        'label'    => __('Remove Header Banner', 'wp-bootstrap-starter'),
+        'label'    => __('Remove Header Banner', 'chili-bootstrap'),
         'section'    => 'header_image',
         'type'     => 'checkbox',
     ) ) );
@@ -151,16 +151,16 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
    $wp_customize->add_section(
         'site_name_text_color',
         array(
-            'title' => __( 'Other Customizations', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Other Customizations', 'chili-bootstrap' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'chili-bootstrap' ),
             'priority' => 40,
         )
     );
     $wp_customize->add_section(
         'colors',
         array(
-            'title' => __( 'Background Color', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Background Color', 'chili-bootstrap' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'chili-bootstrap' ),
             'priority' => 50,
             'panel' => 'styling_option_panel',
         )
@@ -168,8 +168,8 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'background_image',
         array(
-            'title' => __( 'Background Image', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Background Image', 'chili-bootstrap' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'chili-bootstrap' ),
             'priority' => 60,
             'panel' => 'styling_option_panel',
         )
@@ -186,21 +186,21 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->get_control( 'background_color'  )->section = 'site_name_text_color';
 
     // Add control for logo uploader
-    $wp_customize->add_setting( 'wp_bootstrap_starter_logo', array(
-        //'default' => __( '', 'wp-bootstrap-starter' ),
+    $wp_customize->add_setting( 'chili_bootstrap_starter_logo', array(
+        //'default' => __( '', 'chili-bootstrap' ),
         'sanitize_callback' => 'esc_url',
     ) );
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wp_bootstrap_starter_logo', array(
-        'label'    => __( 'Upload Logo (replaces text)', 'wp-bootstrap-starter' ),
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'chili_bootstrap_starter_logo', array(
+        'label'    => __( 'Upload Logo (replaces text)', 'chili-bootstrap' ),
         'section'  => 'title_tagline',
-        'settings' => 'wp_bootstrap_starter_logo',
+        'settings' => 'chili_bootstrap_starter_logo',
     ) ) );
 
 }
-add_action( 'customize_register', 'wp_bootstrap_starter_customize_register' );
+add_action( 'customize_register', 'chili_bootstrap_starter_customize_register' );
 
-add_action( 'wp_head', 'wp_bootstrap_starter_customizer_css');
-function wp_bootstrap_starter_customizer_css()
+add_action( 'wp_head', 'chili_bootstrap_starter_customizer_css');
+function chili_bootstrap_starter_customizer_css()
 {
     ?>
     <style type="text/css">
@@ -213,7 +213,7 @@ function wp_bootstrap_starter_customizer_css()
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function wp_bootstrap_starter_customize_preview_js() {
-    wp_enqueue_script( 'wp_bootstrap_starter_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function chili_bootstrap_starter_customize_preview_js() {
+    wp_enqueue_script( 'chili_bootstrap_starter_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'wp_bootstrap_starter_customize_preview_js' );
+add_action( 'customize_preview_init', 'chili_bootstrap_starter_customize_preview_js' );

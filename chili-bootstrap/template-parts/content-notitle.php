@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WP_Bootstrap_Starter
+ * @package chili-bootstrap
  */
 
 ?>
@@ -15,7 +15,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chili-bootstrap' ),
 				'after'  => '</div>',
 			) );
 		?>

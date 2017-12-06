@@ -27,9 +27,9 @@
         <div class="container">
             <nav class="navbar navbar-expand-xl navbar-dark p-0">
                 <div class="navbar-brand">
-                    <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+                    <?php if ( get_theme_mod( 'chili_bootstrap_starter_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <img src="<?php echo esc_attr(get_theme_mod( 'chili_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
                     <?php else : ?>
                         <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
@@ -49,8 +49,8 @@
                 'menu_id'         => false,
                 'menu_class'      => 'navbar-nav',
                 'depth'           => 3,
-                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker()
+                'fallback_cb'     => 'chili_bootstrap_navwalker::fallback',
+                'walker'          => new chili_bootstrap_navwalker()
                 ));
                 ?>
 
@@ -65,7 +65,7 @@
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo get_theme_mod( 'header_banner_title_setting' );
                     }else{
-                        echo 'Wordpress + Bootstrap';
+                        echo 'Wordpress + Chili';
                     }
                     ?>
                 </h1>
@@ -74,7 +74,7 @@
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
                         echo get_theme_mod( 'header_banner_tagline_setting' );
                 }else{
-                        echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
+                        echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','chili-bootstrap-starter');
                     }
                     ?>
                 </p>
