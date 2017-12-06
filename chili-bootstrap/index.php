@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Chili_Boostrap
+ * @package chili-bootstrap
  */
 
 get_header(); ?>

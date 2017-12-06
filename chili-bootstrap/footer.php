@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WP_Bootstrap_Starter
+ * @package chili-bootstrap
  */
 
 ?>
@@ -20,7 +20,7 @@
             <div class="site-info">
                 &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
                 <span class="sep"> | </span>
-                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="Wordpress Technical Support" alt="Bootstrap Wordpress Theme"><?php echo esc_html__('Bootstrap Wordpress Theme','wp-bootstrap-starter'); ?></a>
+                <a class="credits" href="http://chiliit.pl" target="_blank" title="Technical Support" alt="Chili Wordpress Theme"><?php echo esc_html__('Chili Wordpress Theme','chili-bootstrap'); ?></a>
 
             </div><!-- close .site-info -->
 		</div>
